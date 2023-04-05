@@ -1,0 +1,19 @@
+@import "../../vars.scss";
+.footerContainer {
+  bottom: 8px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+
+  .footerContainer__icon {
+    font-size: 30px;
+    &:hover {
+      cursor: pointer;
+      color: $yellow;
+    }
+    &:active {
+      color: $yellow;
+    }
+  }
+}

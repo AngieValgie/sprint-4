@@ -1,0 +1,15 @@
+.carouselImgContain {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.carouselImg {
+  width: 50%;
+  height: 50%;
+}
