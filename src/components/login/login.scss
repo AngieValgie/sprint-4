@@ -1,0 +1,37 @@
+@import "../../vars.scss";
+
+.secHomeLogin {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.formLogin {
+  color: $gray;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50%;
+  width: 80%;
+  justify-content: space-between;
+
+  label {
+    border-bottom: 1px solid $yellow;
+    display: flex;
+    gap: 10px;
+  }
+  input {
+    border: none;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: $yellow;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+}

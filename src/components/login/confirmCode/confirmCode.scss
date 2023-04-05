@@ -1,0 +1,36 @@
+@import "../../../vars.scss";
+.confirmContainer {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: left;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 50%;
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid $gray;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: $yellow;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+}

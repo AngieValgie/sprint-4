@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import img1 from "../../images/Maskgroup.svg";
@@ -9,33 +9,84 @@ import ReactStars from "react-rating-stars-component";
 import "./home.scss";
 import Footer from "../footer/Footer";
 import promoImg1 from "../../images/Promo1.svg";
-import promoImg2 from "../../images/Promo2.svg";
+import { BsFillGeoAltFill } from "react-icons/bs";
 
 const ratingChanged = (newRating) => {
   console.log(newRating);
 };
 
 const Home = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  useEffect(() => {
+    console.log(width);
+  }, [width]);
   return (
-    <section className="">
+    <section className="home">
+      <div className="maps">
+        <BsFillGeoAltFill className="icon" />
+        <div className="mapsTxt">
+          <p className="p1">DELIVER TO</p>
+          <p className="p2">882 Well St, New-York</p>
+        </div>
+      </div>
+
       <Carousel
         emulateTouch={true}
         showArrows={false}
         showStatus={false}
         showIndicators={false}
         showThumbs={false}
-        width={"80%"}
         infiniteLoop={true}
+        centerMode={true}
+        centerSlidePercentage={width >= 768 ? 30 : 80}
         className="carouselHome"
       >
         <div className="carouselImgContainHome">
           <img src={promoImg1} className="carouselImg" />
         </div>
         <div className="carouselImgContainHome">
-          <img src={promoImg2} className="carouselImg" />
+          <img src={promoImg1} className="carouselImg" />
         </div>
         <div className="carouselImgContainHome">
           <img src={promoImg1} className="carouselImg" />
+        </div>
+      </Carousel>
+      <p>Restaurants and cafes</p>
+
+      <Carousel
+        emulateTouch={true}
+        showArrows={false}
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        infiniteLoop={true}
+        centerMode={true}
+        centerSlidePercentage={width >= 768 ? 30 : 80}
+        className="carouselHome"
+      >
+        <div className="">
+          <button>All</button>
+        </div>
+        <div className="">
+          <button>Fast food</button>
+        </div>
+        <div className="">
+          <button>Pizza</button>
+        </div>
+        <div className="">
+          <button>Pasta</button>
+        </div>
+        <div className="">
+          <button>Fruits</button>
         </div>
       </Carousel>
 

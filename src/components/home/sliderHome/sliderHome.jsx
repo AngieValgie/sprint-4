@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./sliderHome.scss";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 
 const SliderHome = () => {
   return (
-    <section>
-      <Link to="/home">link</Link>
+    <section className="sliderContain">
       <Carousel
         emulateTouch={true}
         showArrows={false}
@@ -37,6 +36,11 @@ const SliderHome = () => {
           <p>We will deliver as soon as possible</p>
         </div>
       </Carousel>
+      <div className="btnStartContain">
+        <Link to="/login" className="btnStart">
+          Start
+        </Link>
+      </div>
     </section>
   );
 };

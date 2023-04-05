@@ -1,0 +1,56 @@
+@import "../../../vars.scss";
+.register {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  h2 {
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.formRegister {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  display: flex;
+  height: 70%;
+  gap: 20px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: $gray;
+}
+
+.formInput {
+  border: none;
+  border-bottom: 1px solid $gray;
+  width: 100%;
+}
+
+.input__Button {
+  border: none;
+  background-color: $yellow;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+  .inputs {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
