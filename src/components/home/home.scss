@@ -2,6 +2,21 @@
 .home {
   padding: 20px;
 }
+.carouselbtns {
+  margin: 30px 0;
+  .alv {
+    display: flex;
+    gap: 10px;
+  }
+  button {
+    border: none;
+    background-color: $yellow;
+    width: 100px;
+    cursor: pointer;
+    padding: 5px 13px;
+    border-radius: 8px;
+  }
+}
 
 .carouselHome {
   display: flex;

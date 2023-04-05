@@ -10,6 +10,12 @@ import "./home.scss";
 import Footer from "../footer/Footer";
 import promoImg1 from "../../images/Promo1.svg";
 import { BsFillGeoAltFill } from "react-icons/bs";
+import {
+  FaHamburger,
+  FaPizzaSlice,
+  FaPastafarianism,
+  FaAppleAlt,
+} from "react-icons/fa";
 
 const ratingChanged = (newRating) => {
   console.log(newRating);
@@ -71,22 +77,32 @@ const Home = () => {
         infiniteLoop={true}
         centerMode={true}
         centerSlidePercentage={width >= 768 ? 30 : 80}
-        className="carouselHome"
+        className="carouselbtns"
       >
-        <div className="">
+        <div className="alv">
           <button>All</button>
         </div>
-        <div className="">
-          <button>Fast food</button>
+        <div className="alv">
+          <button>
+            <FaHamburger />
+            Fast food
+          </button>
         </div>
-        <div className="">
-          <button>Pizza</button>
+        <div className="alv">
+          <button>
+            <FaPizzaSlice /> Pizza
+          </button>
         </div>
-        <div className="">
-          <button>Pasta</button>
+        <div className="alv">
+          <button>
+            <FaPastafarianism />
+            Pasta
+          </button>
         </div>
-        <div className="">
-          <button>Fruits</button>
+        <div className="alv">
+          <button>
+            <FaAppleAlt /> Fruits
+          </button>
         </div>
       </Carousel>
 
